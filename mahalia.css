@@ -1,6 +1,159 @@
-body {
+/* body {
     color: gray;
     font-family: 'Roboto Mono', monospace;
-/*     font-family: 'Montserrat', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+  } */
+
+  * {
+    font-family: montserrat, sans-serif;
+    color: #9A9C99;
   }
-  
+
+  body{
+  	display: flex;
+  	flex-direction: column;
+  	padding: 0px;
+  	margin: 0px;
+  	}
+
+
+  /* HEADER */
+
+  .phonetic{
+   color: #95CCA9;
+   font-size: 55px;
+   font-weight: 600;
+   text-align: center;
+   padding: 100px 0px 0px 0px;
+   letter-spacing: 1px;
+
+  }
+  .full-name{
+   color: #E8EBEC;
+   font-size: 55px;
+   font-weight: 600;
+   text-align: center;
+   padding: 20px 0px 0px 0px;
+   letter-spacing: 1px;
+  }
+
+  .background-info{
+    text-align: center;
+    padding: 20px;
+
+  }
+  nav ul{
+  	background: #E8EBEC;
+  	position: fixed;
+  	display: flex;
+  	justify-content: space-evenly;
+  	flex-shrink: 0;
+  	padding: 20px;
+  	margin: 0;
+    top: 0px;
+    width: 100%;
+  	z-index: 1000;
+  }
+
+  nav li{
+  	display: inline-block;
+  	border-bottom: 0px;
+  }
+
+  nav ul li a{
+  	text-decoration: none;
+  	margin: 0px;
+  	font-weight: 600;
+  }
+
+  li:hover a {
+      color: #F8B481;
+  }
+
+  li:hover .active {
+      color: #CBCAC9;
+  }
+
+  .active {
+  	color: #CBCAC9;
+
+  }
+
+  /* CONTENT */
+
+  .dim {
+    opacity: 1;
+    transition: opacity .15s ease-in;
+  }
+  .dim:hover,
+  .dim:focus {
+    opacity: .5;
+    transition: opacity .15s ease-in;
+  }
+  .main-content{
+  		flex: 1 0 auto;
+  		min-height:100%;
+  		width:100%;
+  		position: relative;
+  	}
+
+  .container{
+  		margin:4% auto;
+  		width:90%;
+  		max-width:1000px;
+  	}
+
+  	.main-content > div > div{
+  		width:30%;
+  		margin-right:5%;
+  		padding-top:30%;
+  		background-color: #D4D7D5;
+  		float:left;
+  		margin-bottom:30px;
+  	}
+  	.main-content > div > div:nth-child(3n){
+  		margin-right:0;
+
+  	}
+  	@media only screen and (max-width: 768px) {
+  		.main-content > div > div{
+  			width:47.5%;
+  			padding-top:47.5%;
+  		}
+  		.main-content > div > div:nth-child(3n){
+  			margin-right:5%;
+  		}
+  		.main-content > div > div:nth-child(2n){
+  			margin-right:0%;
+  		}
+
+  		.phonetic{
+  			font-size: 35px;
+  		}
+
+  		.full-name{
+  			font-size: 35px;
+  		}
+  	}
+  	@media only screen and (max-width: 590px) {
+  		.main-content > div > div{
+  			width:100%;
+  			padding-top:100%;
+  			margin-right:0%;
+  		}
+
+  		.main-content > div > div:nth-child(3n){
+  			margin-right:0%;
+  		}
+  	}
+
+  /* FOOTER */
+
+  .footer{
+
+  	flex-shrink: 0;
+  	padding:20px;
+  	margin-top:2%;
+  	background: #E8EBEC;
+  	text-align: center;
+  }
