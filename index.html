@@ -5,7 +5,7 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
   <!-- <script src="background.js"></script> -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto+Mono&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" type="text/css" href="mahalia.css" />
@@ -14,25 +14,27 @@
 <body>
   <!-- Header -->
   <header id="home">
-    <!-- <div class="phonetic">ma-hay-lee-yah</div> -->
     <div class="full-name">Mahalia Henry-Richards</div>
     <nav>
       <ul>
-        <li class="home"><a href="#home">mmhr</a></li>
-        <!--         <li class="home"><a href="" class="active">Home</a></li> -->
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <div class="mmhr">
+          <li class="home"><a href="#home">MMHR</a></li>
+        </div>
+        <div class="links">
+          <li><a href="#about">About</a></li>
+          <li class="contact"><a href="#contact">Contact</a></li>
+        </div>
       </ul>
     </nav>
   </header>
 
   <!-- Content -->
 
-  <div class="main-content" >
+  <div class="main-content">
     <div class="container">
       <!--       vimeo iframe -->
 
-      <div style="padding:65% 0 0 0;position:relative;">
+      <div style="padding:60% 0 0 0;position:relative;">
         <iframe
           src="https://player.vimeo.com/video/412982506?byline=0&portrait=0"
           style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -53,7 +55,7 @@
         >
       </p>
 
-      <div style="padding:65% 0 0 0;position:relative;">
+      <div style="padding:60% 0 0 0;position:relative;">
         <iframe
           src="https://player.vimeo.com/video/379627825?byline=0&portrait=0"
           style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -71,7 +73,7 @@
         <a href="http://cyclico.glitch.me/">cyclico.glitch.me</a>
       </p>
 
-      <div style="padding:65% 0 0 0;position:relative;">
+      <div style="padding:60% 0 0 0;position:relative;">
         <iframe
           src="https://player.vimeo.com/video/379776439?byline=0&portrait=0"
           style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -81,7 +83,7 @@
         ></iframe>
       </div>
 
-      <div style="padding:65% 0 0 0;position:relative;">
+      <div style="padding:60% 0 0 0;position:relative;">
         <iframe
           src="https://player.vimeo.com/video/379782846?byline=0&portrait=0"
           style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -96,7 +98,7 @@
         exploring new choreographies.
       </p>
 
-      <div style="padding:65% 0 0 0;position:relative;">
+      <div style="padding:60% 0 0 0;position:relative;">
         <iframe
           src="https://player.vimeo.com/video/379764894?byline=0&portrait=0"
           style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -134,16 +136,21 @@
 
       <!--       about -->
       <div class="heading" id="about">About</div>
+
       <p>
-        Hello, my name’s Mahalia (<span class="phonetic">ma-hay-lee-yah</span>) and I am an artist and
-        interdisciplinary designer currently studying an MArch for Design for
-        Performance and Interaction at UCL’s
+        Hello and welcome - my name’s Mahalia <span class="phonetic">(ma-hay-lee-yah)</span>
+        and I'm an artist and interdisciplinary designer currently studying a
+        MArch for Design for Performance and Interaction at UCL’s
         <a href="http://www.interactivearchitecture.org/"
           >Interactive Architecture Lab</a
         >
         in London.
       </p>
-
+      <div class="image">
+        <img
+          src="https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/s960x960/93954891_10156845639062035_5973168643846963200_o.jpg?_nc_cat=101&_nc_sid=dd9801&_nc_oc=AQlI0ke-MsVHmmUb-imNzaTS9lYfRNEKBLT3n31-bZtfX7o1M2d1lTDGk95_mndiqlE&_nc_ht=scontent-lhr8-1.xx&_nc_tp=7&oh=c79fe62a423a7d7e45a5e00f1953c073&oe=5EFBED7A"
+        />
+      </div>
       <p>
         With a background in architectural and spatial design, my current
         research centres around experimenting with combining technology and
@@ -155,10 +162,11 @@
         with code, find some of my experiments
         <a href="https://www.instagram.com/mm_hr_/">here</a>.
       </p>
-      
-<!--       contact -->
+
+      <!--       contact -->
 
       <div class="heading" id="contact">Contact(s)</div>
+
       <div>
         <p><a href="mailto:mahalia_hr@outlook.com">email</a></p>
       </div>
