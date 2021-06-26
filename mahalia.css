@@ -137,14 +137,6 @@ p {
   max-width: 1000px;
 }
 
-section {
-  display: flex;
-  width: 100%;
-  color: #FF6978;
-  /* opacity: 0.5; */
-  z-index: 0;
-}
-
 .image {
   /*   width: 20px; */
   padding-top: 2%;
