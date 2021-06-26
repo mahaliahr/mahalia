@@ -1,5 +1,5 @@
 * {
-  font-family: "Overpass Mono", sans-serif;
+  font-family: "Overpass Mono", monospace;
   color: #848683;
   background-color: #FFFCF9;
 }
@@ -37,13 +37,13 @@ body {
 
 .project-heading {
   color: #47d7c3;
-  font-size: 20px;
+  font-size: 35px;
   padding: 10px 0px 0px 0px;
   letter-spacing: 1px;
 }
 
 nav ul {
-  background: #ffffff;
+  background: #FFFCF9;
   opacity: 0.5;
   position: fixed;
   display: flex;
