@@ -137,12 +137,12 @@ p {
   max-width: 1000px;
 }
 
-iframe {
-  /* width: 100%; */
+section {
+  display: flex;
+  width: 100%;
   color: #FF6978;
-  position: relative;
   /* opacity: 0.5; */
-  /* z-index: 0; */
+  z-index: 0;
 }
 
 .image {
