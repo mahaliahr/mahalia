@@ -1,7 +1,7 @@
 * {
-  font-family: "Overpass Mono", monospace;
+  font-family: "Overpass Mono", sans-serif;
   color: #848683;
-  /*   background-color: #ffffff; */
+  background-color: #FFFCF9;
 }
 
 body {
@@ -14,12 +14,12 @@ body {
 /* HEADER */
 
 .phonetic {
-  color: #FF8370;
+  color: #FF6978;
   letter-spacing: 1px;
 }
 
 .full-name {
-  color: #FF8370;
+  color: #FF6978;
   font-size: 50px;
   font-weight: 600;
   text-align: center;
@@ -28,7 +28,7 @@ body {
 }
 
 .heading {
-  color: #FF8370;
+  color: #FF6978;
   font-size: 35px;
   padding: 40px 0px 0px 0px;
   letter-spacing: 1px;
