@@ -38,7 +38,7 @@ body {
 .project-heading {
   color: #47d7c3;
   font-size: 35px;
-  padding: 10px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   letter-spacing: 1px;
 }
 
@@ -112,12 +112,13 @@ p {
   /*   color: #152825; */
 }
 
-section {
+/* section {
   background-color: #FF6978;
   width:100%;
   opacity: 0.5;
-}
-/* CONTENT */
+} */
+/* CONT
+ENT */
 
 /*   .dim {
     opacity: 1;
