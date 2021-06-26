@@ -114,6 +114,8 @@ p {
 
 section {
   background-color: #FF6978;
+  width:100%;
+  opacity: 0.5;
 }
 /* CONTENT */
 
