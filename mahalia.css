@@ -137,6 +137,12 @@ p {
   max-width: 1000px;
 }
 
+.project-holder {
+  width: 100%;
+  color: #FF6978;
+  opacity: 0.5;
+}
+
 .image {
   /*   width: 20px; */
   padding-top: 2%;
