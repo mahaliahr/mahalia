@@ -11,7 +11,7 @@ body {
   margin: 0px;
   cursor: url("assets/cursors.png"), auto;
   background-image: url("assets/bg.png");
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 /* HEADER */
