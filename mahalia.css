@@ -16,11 +16,13 @@ body {
 
 .phonetic {
   color: #FF6978;
+  font-family: "Roboto", sans-serif;
   /* letter-spacing: 1px; */
 }
 
 .name {
-  font-family: "Overpass Mono", monospace;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
 }
 
 .full-name {
@@ -84,12 +86,13 @@ nav li {
 nav ul li a {
   text-decoration: none;
   margin: 0px;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Overpass Mono", monospace;
+    color: #FF6978;
 }
 
 li:hover a {
   text-decoration: none;
-  color: #47d7c3;
+  color: #7AE1D8;
 }
 
 /* li:hover .active {
@@ -103,12 +106,12 @@ li:hover a {
 a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  color: #0E1B19;
-  font-weight: 500;
+  color: #34344A;
+  font-weight: 600;
 }
 
 a:hover {
-  color: #47d7c3;
+  color: #7AE1D8;
 }
 
 p {
@@ -144,7 +147,7 @@ ENT */
 }
 
 .container {
-  padding: 10px 0px 0px 0px;
+  padding: 40px 0px 0px 0px;
   margin: 4% auto;
   width: 90%;
   max-width: 1000px;
