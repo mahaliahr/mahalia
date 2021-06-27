@@ -19,6 +19,10 @@ body {
   letter-spacing: 1px;
 }
 
+.name {
+  font-family: "Overpass Mono", monospace;
+}
+
 .full-name {
   color: #FF6978;
   font-size: 50px;
@@ -150,6 +154,14 @@ ENT */
   padding-top: 2%;
 }
 
+.image-project {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-bottom: 25px;
+}
+
 img {
   display: block;
   margin-left: auto;
@@ -157,6 +169,7 @@ img {
   width: 80%;
   padding-bottom: 25px;
 }
+
 
 /*   	.main-content > div > div{
   		width:30%;
