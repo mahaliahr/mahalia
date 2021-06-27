@@ -1,7 +1,7 @@
 * {
   font-family: "Overpass Mono", monospace;
   color: #848683;
-  background-color: #FF6978;
+  background-color: #FFFCF9;
 }
 
 body {
@@ -62,7 +62,7 @@ nav ul {
 }
 
 .mmhr {
-  color: #47d7c3;
+  color: #FF6978;
 }
 
 .links {
