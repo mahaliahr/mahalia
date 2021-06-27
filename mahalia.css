@@ -1,7 +1,8 @@
 * {
   font-family: "Overpass Mono", monospace;
   color: #848683;
-  background-color: #FFFCF9;
+  background-image: url("assets/bg.png") #FFFCF9;
+  /* background-color: #FFFCF9; */
 }
 
 body {
@@ -10,7 +11,7 @@ body {
   padding: 0px;
   margin: 0px;
   cursor: url("assets/cursors.png"), auto;
-  background-image: url("assets/bg.png");
+
   /* opacity: 0.5; */
 }
 
