@@ -1,7 +1,7 @@
 * {
   font-family: "Overpass Mono", monospace;
   color: #848683;
-  background-color: #FFFCF9;
+  background-color: #FF6978;
 }
 
 body {
@@ -48,7 +48,7 @@ body {
 }
 
 nav ul {
-  background: #FF6978;
+  background: #FFFCF9;
   opacity: 0.5;
   position: fixed;
   display: flex;
