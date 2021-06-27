@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   padding: 0px;
   margin: 0px;
-  /* cursor: url("assets/cursors.png"), auto; */
+  cursor: url("assets/cursors.png"), auto;
 }
 
 /* HEADER */
