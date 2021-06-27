@@ -16,7 +16,7 @@ body {
 
 .phonetic {
   color: #FF6978;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 .name {
@@ -48,7 +48,7 @@ body {
 }
 
 nav ul {
-  background: #FFFCF9;
+  background: #FF6978;
   opacity: 0.5;
   position: fixed;
   display: flex;
@@ -114,7 +114,7 @@ a:hover {
 p {
   font-family: "Roboto", sans-serif;
   font-size: 25x;
-  padding: 20px 0px 20px 0px;
+  padding: 10px 0px 10px 0px;
   /*   color: #152825; */
 }
 
