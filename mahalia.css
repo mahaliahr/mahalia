@@ -50,8 +50,8 @@ body {
 }
 
 nav ul {
-  background: #FFFCF9;
-  opacity: 0.5;
+  /* background: #FFFCF9; */
+  /* opacity: 0.5; */
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -147,7 +147,7 @@ ENT */
 }
 
 .container {
-  padding: 40px 0px 0px 0px;
+  padding: 100px 0px 0px 0px;
   margin: 4% auto;
   width: 90%;
   max-width: 1000px;
