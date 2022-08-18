@@ -1,6 +1,6 @@
 * {
   font-family: "Overpass Mono", monospace;
-  color: rgba(55, 53, 75, .8);
+  color: rgba(55, 53, 75, .6);
   overflow: hidden;
 
 }
@@ -74,12 +74,9 @@ img:hover {
 .name {
   font-weight: 600;
   color: #DEF8F4;
-  /* font-family: "Roboto", sans-serif; */
 }
 
 nav ul {
-  /* background: #FFFCF9;
-  opacity: 0.5; */
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -99,7 +96,6 @@ nav ul {
   justify-content: space-evenly;
   display: flex;
   padding: 0 45px 0 0;
-      /* right:10px; */
 }
 
 .contact {
@@ -157,34 +153,16 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 3vw;
   color: #DEF8F4;
-  /* padding: 0px 0px 0px 0px; */
-  /* color: #ffffff; */
 }
 .about-text {
   padding:100px;
 }
 
-/*   	.main-content > div > div{
-  		width:30%;
-  		margin-right:5%;
-  		padding-top:30%;
-  		background-color: #fcefef;
-  		float:left;
-  		margin-bottom:30px;
-  	}
-  	.main-content > div > div:nth-child(3n){
-  		margin-right:0;
-
-  	} */
 @media only screen and (max-width: 768px) {
 
     		.phonetic{
   			font-size:3vw;
   		}
-
-  /* .full-name {
-    font-size: 35px;
-  } */
 }
 
 @media only screen and (max-width: 590px) {
@@ -227,6 +205,28 @@ p {
   } */
 }
 
+
+svg{
+  fill:#FF6978;
+}
+svg:hover {
+  fill: #DEF8F4;
+}
+
+.nav-svgs{
+  width:4vw;
+  padding-left:5px;
+}
+
+#svg-holder{
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom:8px;
+  padding-left: 10px;
+  z-index: 3000;
+}
+
 /* FOOTER */
 .footer {
   position: fixed;
@@ -242,5 +242,4 @@ p {
   padding: 20px;
   margin-top: 2%;
   text-align: center; */
-
 }
