@@ -1,6 +1,6 @@
 * {
   font-family: "Overpass Mono", monospace;
-  color: rgba(55, 53, 75, .6);
+  color: rgba(55, 53, 75, .2);
   overflow: hidden;
 
 }
@@ -8,7 +8,7 @@
 body {
   display: flex;
   flex-direction: column;
-  font-size: 2.5vw;
+  font-size: 40px;
   line-height: 1.5;
 
   background-color: #79E2D4;
@@ -141,18 +141,51 @@ animation: fadein 0.5s;
 
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 3vw;
+  font-size: 35px;
   color: #DEF8F4;
 }
 .about-text {
   padding:100px;
 }
 
+svg {
+  fill: #FF5C6C;
+  position: relative;
+  z-index: 4000;
+  /* pointer-events: none; */
+}
+svg:hover {
+  fill: #DEF8F4;
+}
+
+.nav-svgs {
+  width:50px;
+  padding-left:10px;
+  fill: #FF5C6C;
+}
+
+#svg-holder {
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom:8px;
+  padding-left: 10px;
+  z-index: 3000;
+}
+
 @media only screen and (max-width: 768px) {
 
     		.phonetic{
-  			font-size:3vw;
+  			font-size:30px;
   		}
+
+      p {
+        font-size: 30px;
+      }
+
+      /* .about-text {
+        padding:60px;
+      } */
 }
 
 @media only screen and (max-width: 590px) {
@@ -163,32 +196,26 @@ p {
     /* object-fit: scale-down;*/
   }
 
+  .phonetic{
+  font-size:20px;
+}
+
+  body {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
   .about-text {
     padding:55px;
   }
 
-}
-
-
-svg{
-  fill:#FF6978;
-}
-svg:hover {
-  fill: #DEF8F4;
-}
-
-.nav-svgs{
-  width:4vw;
-  padding-left:5px;
-}
-
-#svg-holder{
-  position:fixed;
-  left: 0;
-  bottom: 0;
-  padding-bottom:8px;
-  padding-left: 10px;
-  z-index: 3000;
+  .nav-svgs {
+    width:30px;
+    padding-left:5px;
+  }
 }
 
 /* FOOTER */

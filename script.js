@@ -42,7 +42,7 @@ document.addEventListener("click", function(event) {
   placeImage(event.pageX, event.pageY)
 })
 
-document.addEventListener("touchend", function(event) {
+document.addEventListener("touchstart", function(event) {
   event.preventDefault()
   placeImage(event.pageX, event.pageY)
 })
