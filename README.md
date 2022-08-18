@@ -1,2 +1,2 @@
 # mahalia
-website update work in progress
+website update August 2022

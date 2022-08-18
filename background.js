@@ -9,6 +9,15 @@ function setup() {
   dimension = 50;
 }
 
+function ShowAndHide() {
+    var x = document.getElementById('about-block');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }

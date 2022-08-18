@@ -2,8 +2,8 @@
   <title>Mahalia Henry-Richards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <!-- <script src="background.js"></script> -->
+  <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
+  <script src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="mahalia.css" />
 </head>
@@ -11,15 +11,15 @@
 <body>
   <!-- Header -->
   <header id="home">
-    <!-- <div class="full-name">Mahalia Henry-Richards</div> -->
     <nav>
       <ul>
         <div class="mmhr">
-          <li class="home"><a href="#home">Mahalia HR</a></li>
+          <li class="home"><a href="https://mm-hr.com/">Mahalia HR</a></li>
         </div>
         <div class="links">
-          <li><a href="#about">About</a></li>
-          <li class="contact"><a href="#contact">Contact</a></li>
+          <li onclick="ShowAndHide()">About</li>
+          <!-- <img id="nav-svgs" src=".assets/vimeo.svg" alt="Vimeo"> -->
+          <!-- <li class="contact"><a href="mailto:mahalia_hr@outlook.com">Contact</a></li> -->
         </div>
       </ul>
     </nav>
@@ -28,115 +28,59 @@
   <!-- Content -->
 
   <div class="main-content">
-    <div class="container">
-
-      <section>
-        <div class="project-heading">The Playground</div>
-        <div style="padding:60% 0 0 0;position:relative;">
-          <iframe src="https://player.vimeo.com/video/503542926?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div id="container">
+      <div id="about-block" style="display:none">
+        <div class="about-text">
+          <p>
+            <span class="name"> Mahalia <span class="phonetic">[ma-hay-lee-yah]</span> Henry-Richards </span>is an interdisciplinary artist and designer. She has worked for several years in design studios, on a wide scope of work including spatial
+            and cartographic design to user experience and interface design.</p>
+          <p>
+            Intrigued by exploring the materiality and malleability of technology, Mahalia considers computational thinking and algorithms as a framework that can be applied in all kinds of creative practice. With an approach that centres a playful
+            and explorative methodology, she is passionate about creating space for the messy, nuanced and visceral qualities of life to take centre stage.
+          </p>
+          <p>She has exhibited work at Tate Britain, Old Truman Brewery and Ars Electronica and she has performed at Algoraves where she uses live coding as an experimental tool in crafting visual experiences.</p>
+          <p>Mahalia is currently Lecturer on the MSc Creative Computing program at UAL Creative Computing Institute. Previous to this she taught at University for the Creative Arts, leading a studio involved in the reimagining of architectural and
+            spatial design - incorporating new media technologies and intertwining physical and digital experience.</p>
         </div>
-
-        <p>Responding to challenges posed by remote interaction and physical distancing, The Playground creates a hybrid world, both physical and digital – encouraging us to reimagine social interaction in times of distance.</p>
-        <p>The designers’ shared identity ‘The Monads', in design process and gameplay, integrates their personal collaboration through performances, music, poetry, and co-produced costume: an interface between physical and
-          virtual where seemingly
-          arbitrary constraints form a rigorous framework for experimentation.</p>
-        <p>
-          Players are invited to embark on an evolving journey questioning what it means to be together when physically not co-located, to collectively construct a shared environment through messy, unpredictable interaction.
-          <br />Read more:
-          <a href="http://wearethemonads.com">The Playground</a>
-        </p>
-      </section>
-
-
-      <div class="project-heading">The Monads</div>
-
-      <div class="image-project">
-        <img src="assets/the-monads.jpg" />
-      </div>
-      <div style="padding:60% 0 0 0;position:relative;">
-        <iframe src="https://www.youtube.com/embed/Kcpe-S0D68M" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
       </div>
 
-      <p>
-        The Monads are Mahalia Henry-Richards and Stephen Henderson. Formed as both avatars and a shared identity, The Monads came into being as an attempt to explore the concept of shared space. Rather than thinking of space in physical terms, The
-        Monads prompt us to ask what constitutes togetherness and collaboration in times of physical distance. </p>
+      <div id="svg-holder">
+        <svg version="1.1" class="nav-svgs" id="vimeo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+          <a href="https://vimeo.com/mahaliahr/">
+            <path class="st0" d="M16,0C7.2,0,0,7.2,0,16c0,8.8,7.2,16,16,16s16-7.2,16-16C32,7.2,24.8,0,16,0z M23.8,13
+        c-0.9,5.3-6.2,9.7-7.7,10.8c-1.6,1-3-0.4-3.5-1.5c-0.6-1.2-2.4-7.9-2.8-8.5c-0.5-0.6-1.9,0.6-1.9,0.6l-0.7-0.9c0,0,2.8-3.4,5-3.8
+        c2.3-0.5,2.3,3.5,2.8,5.7c0.5,2.1,0.9,3.4,1.4,3.4c0.5,0,1.4-1.2,2.3-3c1-1.8,0-3.4-2-2.3C17.5,8.8,24.8,7.7,23.8,13z" />
+          </a>
+        </svg>
+        <svg version="1.1" class="nav-svgs" id="instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.2 19.2" style="enable-background:new 0 0 19.2 19.2;" xml:space="preserve">
+          <a href="https://www.instagram.com/mahalia_hr/">
+            <path class="st0" d="M13.5,6.7c-0.2-0.4-0.5-0.8-0.9-0.9c-0.3-0.1-0.6-0.2-0.9-0.2c-0.5,0-0.7,0-2,0s-1.5,0-2,0
+        c-0.3,0-0.6,0.1-0.9,0.2C6.2,5.9,5.9,6.2,5.7,6.7C5.6,6.9,5.5,7.3,5.5,7.6c0,0.5,0,0.7,0,2s0,1.5,0,2c0,0.3,0.1,0.6,0.2,0.9
+        c0.2,0.4,0.5,0.8,0.9,0.9c0.3,0.1,0.6,0.2,0.9,0.2c0.5,0,0.7,0,2,0s1.5,0,2,0c0.3,0,0.6-0.1,0.9-0.2c0.4-0.2,0.8-0.5,0.9-0.9
+        c0.1-0.3,0.2-0.6,0.2-0.9c0-0.5,0-0.7,0-2s0-1.5,0-2C13.7,7.3,13.6,6.9,13.5,6.7z M9.6,12.2C8.2,12.2,7,11,7,9.6S8.2,7,9.6,7
+        s2.6,1.1,2.6,2.6c0,0,0,0,0,0C12.2,11,11,12.2,9.6,12.2z M12.3,7.5c-0.3,0-0.6-0.3-0.6-0.6s0.3-0.6,0.6-0.6c0.3,0,0.6,0.3,0.6,0.6
+        S12.6,7.5,12.3,7.5L12.3,7.5z" />
+            <circle class="st0" cx="9.6" cy="9.6" r="1.7" />
+            <path class="st0" d="M9.6,0C4.3,0,0,4.3,0,9.6s4.3,9.6,9.6,9.6s9.6-4.3,9.6-9.6S14.9,0,9.6,0C9.6,0,9.6,0,9.6,0z M14.6,11.7
+        c0,0.4-0.1,0.8-0.2,1.2c-0.3,0.7-0.8,1.2-1.5,1.5c-0.4,0.1-0.8,0.2-1.2,0.2c-0.5,0-0.7,0-2.1,0s-1.5,0-2.1,0c-0.4,0-0.8-0.1-1.2-0.2
+        c-0.7-0.3-1.2-0.8-1.5-1.5c-0.1-0.4-0.2-0.8-0.2-1.2c0-0.5,0-0.7,0-2.1s0-1.5,0-2.1c0-0.4,0.1-0.8,0.2-1.2c0.3-0.7,0.8-1.2,1.5-1.5
+        c0.4-0.1,0.8-0.2,1.2-0.2c0.5,0,0.7,0,2.1,0s1.5,0,2.1,0c0.4,0,0.8,0.1,1.2,0.2c0.7,0.3,1.2,0.8,1.5,1.5c0.1,0.4,0.2,0.8,0.2,1.2
+        c0,0.5,0,0.7,0,2.1S14.6,11.1,14.6,11.7z" />
+          </a>
+        </svg>
 
-      <p>Throughout the development of The Playground, they experimented on their own interactions aiming to break through the flatness inherent in many online platforms. They aim to use play and the concept of making the familiar strange to get us
-        to question the nature of our interactions, where our agency
-        lies, and where the lines are between construct and reality.
-      </p>
-
-      <div class="project-heading">Cyclico</div>
-      <div style="padding:60% 0 0 0;position:relative;">
-        <iframe src="https://player.vimeo.com/video/379627825?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <svg version="1.1" class="nav-svgs" id="mail" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+          <a href="mailto:mahalia_hr@outlook.com">
+            <path class="st0" d="M10,0.4c-5.3,0-9.6,4.3-9.6,9.6s4.3,9.6,9.6,9.6s9.6-4.3,9.6-9.6S15.3,0.4,10,0.4z M6.2,7h7.5
+        c0.4,0,0.2,0.5,0,0.6c-0.2,0.1-3.2,1.9-3.3,2S10.1,9.8,10,9.8c-0.1,0-0.3,0-0.4-0.1l-3.3-2C6,7.5,5.8,7,6.2,7z M14,12.5
+        c0,0.2-0.3,0.5-0.4,0.5H6.4C6.3,13,6,12.7,6,12.5V8.9c0-0.1,0-0.2,0.2-0.1l3.4,2c0.1,0.1,0.3,0.1,0.4,0.1c0.1,0,0.3,0,0.4-0.1l3.4-2
+        C14,8.6,14,8.8,14,8.9V12.5z" />
+        </svg></a>
       </div>
-
-      <p>
-        Cyclico is an interactive online tool which provides a visual palette of
-        rotating geometries that you can manipulate and augment via four sliders
-        - creating a variety of constantly morphing and undulating audio
-        responsive graphics.<br />Have a play at:
-        <a href="http://cyclico.glitch.me/">cyclico.glitch.me</a>
-      </p>
-
-      <div class="project-heading">Follow / Avoid</div>
-      <div style="padding:60% 0 0 0;position:relative;">
-        <iframe src="https://player.vimeo.com/video/379776439?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-
-      <div style="padding:60% 0 0 0;position:relative;">
-        <iframe src="https://player.vimeo.com/video/379782846?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-
-      <p>
-        Development of a virtual reality tool for breaking movement habits and
-        exploring new choreographies.
-      </p>
-
-      <div class="project-heading">(Many) Ways of Seeing</div>
-      <div style="padding:60% 0 0 0;position:relative;">
-        <iframe src="https://player.vimeo.com/video/379764894?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </div>
-
-      <p>
-        Exploring ways of seeing our surrounding environment, using machine
-        learning models BigBiGAN & im2txt
-      </p>
-
-      <!--       grid old -->
-
-      <!--       <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div>
-      <div class="dim"></div> -->
-
-      <!--       about -->
-      <div class="heading" id="about">About</div>
-
-      <div class="image">
-        <img src="assets/mhr.jpg" />
-      </div>
-
-      <p>
-        <span class="name"> Mahalia <span class="phonetic">[ma-hay-lee-yah]</span> Henry-Richards </span>is an interdisciplinary designer with a background in architectural and digital design as well as performance.
-      </p>
-      <p>
-        The merging of disciplines is central to her work - challenging and questioning what forms design can take. Her approach is one that centres a playful and explorative methodology and she is passionate about her work creating space for the
-        messy, nuanced and visceral qualities of life to take centre stage.
-      </p>
-      <p>Mahalia is an Associate Lecturer at University for the Creative Arts, leading a studio involved in the reimagining of architectural and spatial design - incorporating new media technologies and intertwining physical and digital experience.</p>
 
       <!--       contact -->
 
-      <div class="heading" id="contact">Contact(s)</div>
+      <!-- <div class="heading" id="contact">Contact(s)</div>
 
       <div>
         <p><a href="mailto:mahalia_hr@outlook.com">email</a></p>
@@ -148,11 +92,11 @@
       </div>
       <div>
         <p><a href="https://twitter.com/may_hr">twitter</a></p>
-      </div>
+      </div>-->
     </div>
   </div>
 
   <div class="footer">
-    &copy 2021 Mahalia Henry-Richards
+    &copy 2022 Mahalia Henry-Richards
   </div>
 </body>
