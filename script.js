@@ -14,17 +14,6 @@ const images = [
   "./assets/main-page/13_follow-avoid.gif"
 ];
 
-// const images = [
-//   "assets/img-1.png",
-//   "assets/img-2.png",
-//   "assets/img-3.png",
-//   "assets/img-4.png",
-//   "assets/img-5.png",
-//   "assets/img-6.png",
-//   "assets/img-7.png",
-//   "assets/img-8.png"
-// ];
-
 let i = 0;
 
 function placeImage(x, y) {
@@ -34,7 +23,7 @@ function placeImage(x, y) {
   img.setAttribute("src", nextImage);
   img.style.left = x + "px";
   img.style.top = y + "px";
-  img.style.transform = "translate(-50%, -50%) scale(0.5) rotate(" + (Math.random() * 20-10) + "deg)"
+  img.style.transform = "translate(-50%, -50%) scale(0.5) rotate(" + (Math.random() * 20 - 10) + "deg)"
 
   document.body.appendChild(img);
 
@@ -43,25 +32,31 @@ function placeImage(x, y) {
   if (i >= images.length) {
     i = 0;
   }
+  document.getElementById('container').appendChild(img)
+
 }
 
-document.addEventListener("click", function (event) {
+document.addEventListener("click", function(event) {
   event.preventDefault()
 
   placeImage(event.pageX, event.pageY)
 })
 
-document.addEventListener("touchend", function(event){
+document.addEventListener("touchend", function(event) {
   event.preventDefault()
   placeImage(event.pageX, event.pageY)
 })
+
+document.addEventListener('click', e => {
+  if (e.pointerType === "mouse") {} // mouse event
+  else {} // touch event
+});
 
 function ShowAndHide() {
-    var x = document.getElementById("about-block");
-    if (x.style.display == 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
+  var x = document.getElementById("about-block");
+  if (x.style.display == 'none') {
+    x.style.display = 'block';
+  } else {
+    x.style.display = 'none';
+  }
 }
-fitty("about-block");

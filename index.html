@@ -2,9 +2,8 @@
   <title>Mahalia Henry-Richards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
-  <script src="https://player.vimeo.com/api/player.js"></script>
+  <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
   <script src="script.js"></script>
-  <script src="fitty.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@600&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="mahalia.css" />
 </head>
@@ -12,7 +11,6 @@
 <body>
   <!-- Header -->
   <header id="home">
-    <!-- <div class="full-name">Mahalia Henry-Richards</div> -->
     <nav>
       <ul>
         <div class="mmhr">
@@ -20,7 +18,7 @@
         </div>
         <div class="links">
           <li onclick="ShowAndHide()">About</li>
-          <li class="contact"><a href="#contact">Contact</a></li>
+          <li class="contact"><a href="mailto:mahalia_hr@outlook.com">Contact</a></li>
         </div>
       </ul>
     </nav>
@@ -29,16 +27,22 @@
   <!-- Content -->
 
   <div class="main-content">
-    <div class="container">
-      <div id="about-block"style="display:none">
-      <p>
-        <span class="name"> Mahalia <span class="phonetic">[ma-hay-lee-yah]</span> Henry-Richards </span>is an interdisciplinary artist and designer. She has worked for several years in design studios, on a wide scope of work including spatial and cartographic design to user experience and interface design.</p>
-      <p>
-        Intrigued by exploring the materiality and malleability of technology, Mahalia considers computational thinking and algorithms as a framework that can be applied in all kinds of creative practice. With an approach that centres a playful and explorative methodology,  she is passionate about creating space for the messy, nuanced and visceral qualities of life to take centre stage.
-      </p>
-      <p>She has exhibited work at Tate Britain, Old Truman Brewery and Ars Electronica and she has performed at Algoraves where she uses live coding as an experimental tool in crafting visual experiences.</p>
-      <p>Mahalia is currently Lecturer on the MSc Creative Computing program at UAL Creative Computing Institute. Previous to this she taught at University for the Creative Arts, leading a studio involved in the reimagining of architectural and spatial design - incorporating new media technologies and intertwining physical and digital experience.</p>
-</div>
+    <div id="container">
+      <div id="about-block" style="display:none">
+        <div class="about-text">
+          <p>
+            <span class="name"> Mahalia <span class="phonetic">[ma-hay-lee-yah]</span> Henry-Richards </span>is an interdisciplinary artist and designer. She has worked for several years in design studios, on a wide scope of work including spatial
+            and cartographic design to user experience and interface design.</p>
+          <p>
+            Intrigued by exploring the materiality and malleability of technology, Mahalia considers computational thinking and algorithms as a framework that can be applied in all kinds of creative practice. With an approach that centres a playful
+            and explorative methodology, she is passionate about creating space for the messy, nuanced and visceral qualities of life to take centre stage.
+          </p>
+          <p>She has exhibited work at Tate Britain, Old Truman Brewery and Ars Electronica and she has performed at Algoraves where she uses live coding as an experimental tool in crafting visual experiences.</p>
+          <p>Mahalia is currently Lecturer on the MSc Creative Computing program at UAL Creative Computing Institute. Previous to this she taught at University for the Creative Arts, leading a studio involved in the reimagining of architectural and
+            spatial design - incorporating new media technologies and intertwining physical and digital experience.</p>
+        </div>
+      </div>
+
       <!--       contact -->
 
       <!-- <div class="heading" id="contact">Contact(s)</div>
