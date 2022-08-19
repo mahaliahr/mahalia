@@ -33,24 +33,23 @@ function placeImage(x, y) {
     i = 0;
   }
   document.getElementById('container').appendChild(img)
-
 }
-
-document.addEventListener("click", function(event) {
-  event.preventDefault()
-
-  placeImage(event.pageX, event.pageY)
-})
-
-document.addEventListener("touchstart", function(event) {
-  event.preventDefault()
-  placeImage(event.pageX, event.pageY)
-})
 
 document.addEventListener('click', e => {
   if (e.pointerType === "mouse") {} // mouse event
   else {} // touch event
 });
+
+document.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  placeImage(event.pageX, event.pageY)
+})
+
+// document.addEventListener("touchstart", function(event) {
+//   // event.preventDefault();
+//   placeImage(event.pageX, event.pageY)
+// });
 
 function ShowAndHide() {
   var x = document.getElementById("about-block");

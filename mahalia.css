@@ -152,7 +152,7 @@ svg {
   fill: #FF5C6C;
   position: relative;
   z-index: 4000;
-  /* pointer-events: none; */
+  /* pointer-events:none; */
 }
 svg:hover {
   fill: #DEF8F4;
@@ -173,6 +173,17 @@ svg:hover {
   z-index: 3000;
 }
 
+/* FOOTER */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+}
+
 @media only screen and (max-width: 768px) {
 
     		.phonetic{
@@ -182,10 +193,6 @@ svg:hover {
       p {
         font-size: 30px;
       }
-
-      /* .about-text {
-        padding:60px;
-      } */
 }
 
 @media only screen and (max-width: 590px) {
@@ -195,11 +202,9 @@ svg:hover {
     max-width: 100%;
     /* object-fit: scale-down;*/
   }
-
   .phonetic{
   font-size:20px;
 }
-
   body {
     font-size: 20px;
   }
@@ -216,15 +221,10 @@ svg:hover {
     width:30px;
     padding-left:5px;
   }
-}
-
-/* FOOTER */
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  padding: 20px;
+  .footer {
+    font-size: 10px;
+    text-align: right;
+    width: 50%;
+    padding-left: 45%;
+  }
 }
