@@ -10,7 +10,7 @@ const images = [
   "https://storage.googleapis.com/mmhr/9_ThePlayground-Chat-box-various.png",
   "https://storage.googleapis.com/mmhr/10_hydra-code.jpg",
   "https://storage.googleapis.com/mmhr/11_ThePlayground_keyimage_6.gif",
-  "https://storage.googleapis.com/mmhr/12_ThePlayground_keyimage_8.png",
+  "https://storage.googleapis.com/mmhr/12_playground_sections.png",
   "https://storage.googleapis.com/mmhr/13_follow-avoid.gif"
 ];
 
