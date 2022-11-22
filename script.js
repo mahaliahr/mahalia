@@ -1,17 +1,17 @@
 const images = [
-  "https://storage.googleapis.com/mmhr/1_entrance.png",
-  "https://storage.googleapis.com/mmhr/2_explosion.png",
-  "https://storage.googleapis.com/mmhr/3_cyclico_mhr.jpg",
-  "https://storage.googleapis.com/mmhr/4_ThePlayground_keyimage_5.png",
-  "https://storage.googleapis.com/mmhr/5_ThePlayground_keyimage_3.jpg",
-  "https://storage.googleapis.com/mmhr/6_hydra.png",
-  "https://storage.googleapis.com/mmhr/7_cyclico.png",
-  "https://storage.googleapis.com/mmhr/8_monads%20in%20game.gif",
-  "https://storage.googleapis.com/mmhr/9_ThePlayground-Chat-box-various.png",
-  "https://storage.googleapis.com/mmhr/10_hydra-code.jpg",
-  "https://storage.googleapis.com/mmhr/11_ThePlayground_keyimage_6.gif",
-  "https://storage.googleapis.com/mmhr/12_playground_sections.png",
-  "https://storage.googleapis.com/mmhr/13_follow-avoid.gif"
+  "https://mmhr.s3.amazonaws.com/1_entrance.png",
+  "https://mmhr.s3.amazonaws.com/2_explosion.png",
+  "https://mmhr.s3.amazonaws.com/3_cyclico_mhr.jpg",
+  "https://mmhr.s3.amazonaws.com/4_ThePlayground_keyimage_5.png",
+  "https://mmhr.s3.amazonaws.com/5_ThePlayground_keyimage_3.jpeg",
+  "https://mmhr.s3.amazonaws.com/6_hydra.png",
+  "https://mmhr.s3.amazonaws.com/7_cyclico.png",
+  "https://mmhr.s3.amazonaws.com/8_monads+in+game.gif",
+  "https://mmhr.s3.amazonaws.com/9_ThePlayground-Chat-box-various.png",
+  "https://mmhr.s3.amazonaws.com/10_hydra-code.jpeg",
+  "https://mmhr.s3.amazonaws.com/11_ThePlayground_keyimage_6.gif",
+  "https://mmhr.s3.amazonaws.com/12_ThePlayground_keyimage_8.png",
+  "https://mmhr.s3.amazonaws.com/follow-avoid.gif"
 ];
 
 let i = 0;
