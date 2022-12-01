@@ -1,17 +1,17 @@
 const images = [
-  "https://mmhr.s3.amazonaws.com/1_entrance.png",
-  "https://mmhr.s3.amazonaws.com/2_explosion.png",
-  "https://mmhr.s3.amazonaws.com/3_cyclico_mhr.jpg",
-  "https://mmhr.s3.amazonaws.com/4_ThePlayground_keyimage_5.png",
-  "https://mmhr.s3.amazonaws.com/5_ThePlayground_keyimage_3.jpeg",
-  "https://mmhr.s3.amazonaws.com/6_hydra.png",
-  "https://mmhr.s3.amazonaws.com/7_cyclico.png",
-  "https://mmhr.s3.amazonaws.com/8_monads+in+game.gif",
-  "https://mmhr.s3.amazonaws.com/9_ThePlayground-Chat-box-various.png",
-  "https://mmhr.s3.amazonaws.com/10_hydra-code.jpeg",
-  "https://mmhr.s3.amazonaws.com/11_ThePlayground_keyimage_6.gif",
-  "https://mmhr.s3.amazonaws.com/12_ThePlayground_keyimage_8.png",
-  "https://mmhr.s3.amazonaws.com/follow-avoid.gif"
+    "./assets/main-page/1_entrance.png",
+    "./assets/main-page/2_explosion.png",
+    "./assets/main-page/3_cyclico_mhr.jpg",
+    "./assets/main-page/4_ThePlayground_keyimage_5.png",
+    "./assets/main-page/5_ThePlayground_keyimage_3.jpeg",
+    "./assets/main-page/6_hydra.png",
+    "./assets/main-page/7_cyclico.png",
+    "./assets/main-page/8_monads in game.gif",
+    "./assets/main-page/9_ThePlayground-Chat-box-various.png",
+    "./assets/main-page/10_hydra-code.jpeg",
+    "./assets/main-page/11_ThePlayground_keyimage_6.gif",
+    "./assets/main-page/12_ThePlayground_keyimage_8.png",
+    "./assets/main-page/13_follow-avoid.gif"
 ];
 
 let i = 0;
