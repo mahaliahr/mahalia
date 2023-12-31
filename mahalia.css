@@ -144,7 +144,8 @@ p {
   font-size: 35px;
   color: #DEF8F4;
 }
-.about-text, .project-list {
+/* .about-text, .project-list  */
+.overlay {
   padding:100px;
 }
 
@@ -229,12 +230,14 @@ svg:hover {
     font-size: 15px;
   }
 
-  .about-text, .project-list {
+  /* .about-text, .project-list  */
+  .overlay {
     padding:45px;
+    padding-top:60px;
   }
-   #about-block, #project-block{
+   /* #about-block, #project-block{
      padding-top:60px;
-   }
+   } */
 
   .nav-svgs {
     width:30px;

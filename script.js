@@ -51,20 +51,19 @@ document.addEventListener("click", function(event) {
 //   placeImage(event.pageX, event.pageY)
 // });
 
-// function ShowAndHide() {
-//   var x = document.getElementById("about-block");
-//   if (x.style.display == 'none') {
-//     x.style.display = 'block';
-//   } else {
-//     x.style.display = 'none';
-//   }
-// }
+function ShowAndHide(showElementId, hideElementId) {
+  var showElement = document.getElementById(showElementId);
+  var hideElement = document.getElementById(hideElementId);
 
-function ShowAndHide(elementId) {
-  var x = document.getElementById(elementId);
-  if (x.style.display === 'none') {
-    x.style.display = 'block';
+  // Hide the other element
+  if (hideElement.style.display === 'block') {
+    hideElement.style.display = 'none';
+  }
+
+  // Toggle the display of the selected element
+  if (showElement.style.display === 'none' || showElement.style.display === '') {
+    showElement.style.display = 'block';
   } else {
-    x.style.display = 'none';
+    showElement.style.display = 'none';
   }
 }

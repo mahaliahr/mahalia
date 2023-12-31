@@ -16,10 +16,10 @@
           <li class="home"><a onClick="window.location.reload();">Mahalia Henry-Richards</a></li>
         </div>
         <div class="links">
-          <li onclick="ShowAndHide('about-block')">About</li>
+          <li onclick="ShowAndHide('about-block','project-block')">About</li>
         </div>
         <div class="links">
-          <li onclick="ShowAndHide('project-block')">Projects</li>
+          <li onclick="ShowAndHide('project-block','about-block')">Projects</li>
         </div>
       </ul>
     </nav>
@@ -29,7 +29,7 @@
   <div class="main-content">
     <div id="container">
       <div id="about-block" style="display:none">
-        <div class="about-text">
+        <div class="overlay">
           <p>
             <span class="name"> Mahalia <span class="phonetic">[ma-hay-lee-yah]</span> Henry-Richards </span>is an artist and creative technologist fascinated by the interplay between computation and the multi-sensory human experience. Their playful and exploratory approach challenges the traditional divide between physical and digital, pushing the boundaries of space and interaction.</p>
           <p>
@@ -38,7 +38,12 @@
           <p>At the Creative Computing Institute, Mahalia teaches on the MSc Creative Computing program, with a particular emphasis on crafting immersive computational environments and experience design.</p>
         </div>
         <div id="project-block" style="display:none">
-          <div class="project-list"><p>The Playground</p></div>
+          <div class="overlay">
+            <li>The Playground</li>
+            <li>The Monads</li>
+            <li>println(humanBehaviour);</li>
+            <li>The Monads</li>
+          </div>
         </div>
       </div>
 
@@ -89,6 +94,6 @@
   </div>
 
   <div class="footer">
-    &copy 2023 Mahalia Henry-Richards
+    &copy 2024 Mahalia Henry-Richards
   </div>
 </body>
