@@ -16,7 +16,10 @@
           <li class="home"><a onClick="window.location.reload();">Mahalia Henry-Richards</a></li>
         </div>
         <div class="links">
-          <li onclick="ShowAndHide()">About</li>
+          <li onclick="ShowAndHide('about-block')">About</li>
+        </div>
+        <div class="links">
+          <li onclick="ShowAndHide('project-block')">Projects</li>
         </div>
       </ul>
     </nav>
@@ -34,6 +37,9 @@
           </p>
           <p>At the Creative Computing Institute, Mahalia teaches on the MSc Creative Computing program, with a particular emphasis on crafting immersive computational environments and experience design.</p>
         </div>
+        <div id="project-block" style="display:none">
+          <div class="project-list"><p>The Playground</p></div>
+        </div>
       </div>
 
       <div id="svg-holder">
@@ -43,7 +49,6 @@
             .st0 {
               fill: #FF5C6C;
             }
-
             .st0:hover {
               fill: #ffffff
             }

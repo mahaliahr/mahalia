@@ -51,9 +51,18 @@ document.addEventListener("click", function(event) {
 //   placeImage(event.pageX, event.pageY)
 // });
 
-function ShowAndHide() {
-  var x = document.getElementById("about-block");
-  if (x.style.display == 'none') {
+// function ShowAndHide() {
+//   var x = document.getElementById("about-block");
+//   if (x.style.display == 'none') {
+//     x.style.display = 'block';
+//   } else {
+//     x.style.display = 'none';
+//   }
+// }
+
+function ShowAndHide(elementId) {
+  var x = document.getElementById(elementId);
+  if (x.style.display === 'none') {
     x.style.display = 'block';
   } else {
     x.style.display = 'none';
