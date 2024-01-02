@@ -59,3 +59,16 @@ function ShowAndHide() {
     x.style.display = 'none';
   }
 }
+
+function isChrome() {
+    var userAgent = navigator.userAgent;
+    var isChrome = userAgent.indexOf('Chrome') > -1 && userAgent.indexOf('Edge') == -1 && userAgent.indexOf('OPR') == -1;
+    return isChrome;
+}
+
+if (isChrome()) {
+    var elements = document.querySelectorAll('.main-content');
+    elements.forEach(function(el) {
+        el.style.position = 'relative';
+    });
+}
