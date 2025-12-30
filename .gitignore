@@ -1,0 +1,9 @@
+# macOS artifact
+.DS_Store
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Generated files
+assets/images.json
