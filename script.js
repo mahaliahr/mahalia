@@ -1,22 +1,18 @@
-const images = [
-    "./assets/main-page/1_entrance.png",
-    "./assets/main-page/2_explosion.png",
-    "./assets/main-page/3_cyclico_mhr.jpg",
-    "./assets/main-page/4_ThePlayground_keyimage_5.png",
-    "./assets/main-page/5_ThePlayground_keyimage_3.jpeg",
-    "./assets/main-page/6_hydra.png",
-    "./assets/main-page/7_cyclico.png",
-    "./assets/main-page/8_monads in game.gif",
-    "./assets/main-page/9_ThePlayground-Chat-box-various.png",
-    "./assets/main-page/10_hydra-code.jpeg",
-    "./assets/main-page/11_ThePlayground_keyimage_6.gif",
-    "./assets/main-page/12_ThePlayground_keyimage_8.png",
-    "./assets/main-page/13_follow-avoid.gif"
-];
-
+let images = [];
 let i = 0;
 
+// Load images from generated JSON
+fetch('./assets/images.json')
+  .then(response => response.json())
+  .then(data => {
+    images = data;
+    console.log(`Loaded ${images.length} images`);
+  })
+  .catch(err => console.error('Error loading images:', err));
+
 function placeImage(x, y) {
+  if (images.length === 0) return; // wait for images to load
+  
   const nextImage = images[i];
 
   const img = document.createElement("img");
@@ -24,8 +20,6 @@ function placeImage(x, y) {
   img.style.left = x + "px";
   img.style.top = y + "px";
   img.style.transform = "translate(-50%, -50%) scale(0.5) rotate(" + (Math.random() * 20 - 10) + "deg)"
-
-  document.body.appendChild(img);
 
   i = i + 1;
 
@@ -41,8 +35,11 @@ document.addEventListener('click', e => {
 });
 
 document.addEventListener("click", function(event) {
+  // Don't place image if clicking on a link or nav element
+  if (event.target.tagName === 'A' || event.target.closest('nav')) {
+    return; // let the link work normally
+  }
   event.preventDefault();
-
   placeImage(event.pageX, event.pageY)
 })
 

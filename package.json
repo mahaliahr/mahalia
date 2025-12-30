@@ -1,0 +1,16 @@
+{
+  "name": "mahalia",
+  "version": "1.0.0",
+  "description": "Mahalia Henry-Richards portfolio site",
+  "scripts": {
+    "build": "node generate-images.js",
+    "dev": "node generate-images.js && http-server -p 8000 -o",
+    "start": "http-server -p 8000 -o"
+  },
+  "keywords": [],
+  "author": "Mahalia Henry-Richards",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
