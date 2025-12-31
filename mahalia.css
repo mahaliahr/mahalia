@@ -1,58 +1,61 @@
 * {
-  font-family: "Overpass Mono", monospace;
   color: rgba(55, 53, 75, .2);
-  /* overflow: hidden; */
+  box-sizing: border-box;
+}
+
+/* single source of truth for body text size */
+:root {
+  --body-text-size: 25px;
+  --spacing-unit: clamp(1rem, 2vw, 1.5rem);
 }
 
 body {
+  font-family: "Overpass Mono", monospace;
   display: flex;
   flex-direction: column;
   font-size: 40px;
   line-height: 1.5;
-
   background-color: #79E2D4;
   color: #ffffff;
-
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   cursor: url("assets/cursors.png"), auto;
+  overflow-x: hidden;
+}
+
+html, body {
+  overflow: visible;
 }
 
 .main-content {
   flex: 1 0 auto;
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
-  /* position: relative; */
+  position: relative;
 }
 
 #container {
-  /* padding: 100px 0px 0px 0px; */
   display: block;
   margin: 4% auto;
-  width: 80vw;
+  width: clamp(300px, 80vw, 1000px);
   height: 80vh;
-  max-width: 1000px;
+  position: relative;
 }
 
 @keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 img {
   position: absolute;
   width: 80%;
   max-width: 100%;
-  /* object-fit: scale-down; */
   animation: fadein 0.5s;
 }
 
 img:hover {
-  z-index:1
+  z-index: 1;
 }
 
 /* HEADER */
@@ -60,215 +63,362 @@ img:hover {
   color: #FF6978;
 }
 
-.name {
+.intro-text {
   font-weight: 600;
+  position: fixed;
+  right: clamp(1rem, 4vw, 4rem);
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
   color: #DEF8F4;
+  z-index: 3000;
+  max-width: 40ch;
+  width: min(50%, 40rem);
+  padding: var(--spacing-unit);
 }
 
+/* NAV */
 nav ul {
   position: fixed;
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
-  padding: 20px;
+  padding: var(--spacing-unit);
   margin: 0;
-  top: 0px;
+  top: 0;
   width: 100%;
-  z-index: 3000;
-  pointer-events: auto; /* ensure nav is clickable */
-}
-
-/* ensure nav links are above the mask */
-nav ul li,
-nav ul li a {
-  position: relative;
-  z-index: 3001; /* above nav container and mask */
+  z-index: 3001;
   pointer-events: auto;
 }
 
-.mmhr {
-  color: #FF6978;
-}
-
-.links {
-  justify-content: space-evenly;
-  display: flex;
-  padding: 0 45px 0 0;
-}
-
-.contact {
-  padding-left: 40px;
+nav ul li,
+nav ul li a {
+  position: relative;
+  z-index: 3002;
+  pointer-events: auto;
+  font-size: var(--body-text-size);
+  line-height: 1.4;
 }
 
 nav li {
   display: inline-block;
-  border-bottom: 0px;
+  border-bottom: 0;
   font-family: "Overpass Mono", monospace;
   color: #FF5C6C;
+  list-style: none;
 }
 
-nav ul li a {
+nav ul li a,
+nav li a {
   text-decoration: none;
-  margin: 0px;
+  margin: 0;
   font-family: "Overpass Mono", monospace;
   color: #FF5C6C;
-  pointer-events: auto; /* ensure links are clickable */
+  pointer-events: auto;
 }
 
-li:hover a {
-  text-decoration: none;
-  color: #DEF8F4;
-}
-
-li:hover {
-  text-decoration: none;
-  color: #DEF8F4;
-}
-
+li:hover a,
 a:hover {
+  text-decoration: none;
   color: #DEF8F4;
 }
 
+/* TEXT */
 p {
-  font-family: "Roboto", sans-serif;
-  font-size: 35px;
+  font-size: var(--body-text-size);
   color: #DEF8F4;
-}
-.about-text {
-  padding:100px;
-  position: relative; /* make z-index work */
-  z-index: 3000;      /* above the mask (2500) but below nav (3000) */
+  font-family: "Roboto", sans-serif;
 }
 
- svg {
-  fill: #FF5C6C;
-  position: relative;
-  z-index: 4000;
-  /* pointer-events:none; */
+p a {
+  text-decoration: none;
+  color: #79E2D4;
+  font-weight: 800;
 } 
 
-/* svg:hover {
-  fill: #DEF8F4;
+p a:hover {
+  text-decoration: none;
+  color: #FF5C6C;
+  font-weight: 600;
+} 
+
+/* ABOUT TEXT */
+.about-text {
+  font-family: "Roboto", sans-serif;
+  padding: clamp(1.5rem, 6vw, 6rem);
+  position: relative;
+  z-index: 3000;
+  max-width: 100ch;
 }
 
-.nav-svgs {
-  width:50px;
-  padding-left:10px;
-  fill: #FF5C6C;
-} */
+.about-text p {
+  font-size: var(--body-text-size);
+  line-height: 1.6;
+}
 
-/* #svg-holder {
-  position:fixed;
+/* CONTACT BLOCK */
+#contact-block {
+  position: fixed;
   left: 0;
   bottom: 0;
-  padding-bottom:8px;
-  padding-left: 10px;
+  padding: var(--spacing-unit);
   z-index: 3000;
-} */
+  font-size: var(--body-text-size);
+}
+
+#contact-block nav {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+#contact-block li {
+  font-size: inherit;
+  line-height: 1.4;
+  display: inline-block;
+}
 
 /* FOOTER */
 .footer {
   position: fixed;
   right: 0;
   bottom: 0;
-  font-size: 14px;
+  font-size: var(--body-text-size);
   color: #FF6978;
-  padding: 20px;
-  z-index: 4000;
+  padding: var(--spacing-unit);
+  z-index: 3000;
+  line-height: 1.4;
 }
-/* NAME MASK SVG CONTAINER */
+
+/* NAME MASK SVG */
 .name-mask {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   z-index: 2500;
   pointer-events: none;
   overflow: visible;
+  /* Prevent any transforms or positioning changes */
+  transform: none !important;
+  margin: 0 !important;
 }
 
-/* SVG text styling moved into CSS so it follows your page's scale/settings */
 .name-mask text,
 .name-mask #mask-text {
   font-family: "Overpass Mono", monospace;
   font-weight: 600;
   fill: rgba(55, 53, 75, 1);
-  text-anchor: start; /* left-align the text */
+  text-anchor: start;
   dominant-baseline: middle;
-  font-size: clamp(4rem, 18vmin, 14rem);
+  /* sized relative to the 1200×800 viewBox */
+  font-size: 180px;
   line-height: 1.1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.05em;
 }
 
-/* keep tspans on separate lines and center them */
 .name-mask text tspan {
-  text-anchor: start; /* left-align each line */
+  text-anchor: start;
 }
 
-/* ensure no clipping from the global rule */
 .name-mask,
 .name-mask * {
   overflow: visible !important;
 }
 
-/* small screens tweak so name doesn't overwhelm content */
-@media (max-width: 590px) {
-  .name-mask { z-index: 2000; }
-  .name-mask #mask-text { font-size: clamp(0.75em, 12vw, 1.2em); } /* ~30px to ~48px */
-}
+/* RESPONSIVE BREAKPOINTS */
 
-@media only screen and (max-width: 768px) {
+/* Laptop/small desktop (≤1024px) - stack contact and footer to avoid overlap */
+@media only screen and (max-width: 1024px) {
+  #contact-block,
+  .footer {
+    position: fixed;
+    right: 0;
+    left: auto;
+    width: auto;
+    max-width: 50%;
+    padding: var(--spacing-unit);
+    text-align: right;
+    z-index: 3000;
+  }
 
-    		.phonetic{
-  			font-size:30px;
-  		}
+  #contact-block {
+    bottom: 3rem; /* stack above footer */
+  }
 
-      p {
-        font-size: 30px;
-      }
-}
-
-@media only screen and (max-width: 590px) {
-
-  img {
-    width: 100%;
+  .footer {
+    bottom: 0;
     max-width: 100%;
-    /* object-fit: scale-down;*/
-  }
-  .phonetic{
-  font-size:15px;
-}
-  body {
-    font-size: 20px;
   }
 
-  p {
-    font-size: 15px;
+  #contact-block nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem 0.5rem;
+  }
+
+  #contact-block li {
+    display: inline-block;
+  }
+}
+
+/* Tablet and smaller (≤768px) */
+@media only screen and (max-width: 768px) {
+  :root {
+    --body-text-size: 18px;
+    --spacing-unit: clamp(0.75rem, 2.5vw, 1.25rem);
+  }
+
+  body {
+    font-size: clamp(20px, 4vw, 32px);
+  }
+
+  #container {
+    width: 90vw;
+    margin: 2% auto;
+  }
+
+  .intro-text {
+    position: absolute;
+    right: clamp(1rem, 3vw, 2rem);
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    color: #DEF8F4;
+    z-index: 3000;
+    max-width: 55ch;
+    width: min(70%, 45rem);
+    padding: var(--spacing-unit);
+    font-size: clamp(40px, 3.5vw, 46px); /* make intro text larger */
+    line-height: 1.4;
+  }
+
+  .intro-text p {
+    font-size: inherit; /* use the larger intro-text size */
+    margin: 0;
+  }
+
+  /* Hide mask text, keep overlay */
+  .name-mask #mask-text,
+  .name-mask text,
+  .name-mask tspan {
+    fill: white !important;
+    stroke: none !important;
+    display: inline !important;
+  }
+
+  .name-mask #mask-text {
+    font-size: clamp(1rem, 6vmin, 2rem) !important;
   }
 
   .about-text {
-    padding:45px;
-    z-index: 3000;
-
+    padding: clamp(1rem, 4vw, 3rem);
+    z-index: 3500;
   }
-   /* #about-block{
-     padding-top:60px;
-   } */
 
-  /* .nav-svgs {
-    width:30px;
-    padding-left:5px;
-  } */
+ 
+}
+
+/* Mobile (≤590px) */
+@media only screen and (max-width: 590px) {
+  :root {
+    --body-text-size: 15px;
+    --spacing-unit: 0.75rem;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  #container {
+    width: 95vw;
+    height: 70vh;
+  }
+
+    .intro-text {
+    max-width: 55ch;
+    width: min(70%, 45rem);
+    font-size: clamp(30px, 3.5vw, 36px); /* make intro text larger */
+    line-height: 1.4;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  .name-mask {
+    z-index: 2500;
+  }
+
+  .name-mask #mask-text {
+    font-size: clamp(0.75rem, 10vw, 1.5rem) !important;
+  }
+
+  .about-text {
+    padding: 1.5rem 1rem;
+    z-index: 3500;
+  }
+
+  /* Stack contact and footer on right side */
+  #contact-block,
   .footer {
-    font-size: 10px;
+    position: fixed;
+    right: 0;
+    left: auto;
+    width: auto;
+    max-width: 50%;
+    padding: 0.75rem;
     text-align: right;
-    width: 50%;
-    padding-left: 45%;
+    z-index: 3500;
+  }
+
+  #contact-block {
+    bottom: 2rem;
+  }
+
+  .footer {
+    bottom: 0;
+    max-width: 100%;
+  }
+
+  #contact-block nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.25rem 0.5rem;
+  }
+
+  #contact-block li {
+    display: inline-block;
   }
 }
 
-/* ensure the viewport/root allow visible overflow for full-screen fixed elements */
-html, body {
-  overflow: visible; /* overrides the global * { overflow: hidden } */
+/* Very small screens (≤400px) */
+@media only screen and (max-width: 400px) {
+  :root {
+    --body-text-size: 13px;
+  }
+
+  nav ul {
+    padding: 0.5rem;
+  }
+
+    .intro-text {
+    font-size: clamp(25px, 3.5vw, 30px); /* make intro text larger */
+    line-height: 1.4;
+  }
+
+  #contact-block,
+  .footer {
+    font-size: 12px;
+  }
+
+  #contact-block {
+    bottom: 1.5rem;
+    max-width: 50%;
+
+  }
 }

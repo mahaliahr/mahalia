@@ -22,66 +22,40 @@
   <!-- Content -->
   <div class="main-content">
     <div id="container">
-
-        <!-- HERO NAME MASK (cuts a text-shaped hole in a semi-opaque overlay) -->
-  <svg class="name-mask" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs>
-      <mask id="text-mask" maskUnits="userSpaceOnUse">
-        <!-- white = overlay visible, black = transparent (reveals background) -->
-        <rect width="100%" height="100%" fill="white" />
-        <text id="mask-text"
-              x="10%" y="25%"
-              text-anchor="start"
-              dominant-baseline="middle">
-          <tspan x="10%" dy="0">Mahalia</tspan>
-          <tspan x="10%" dy="1.2em">Henry-</tspan>
-          <tspan x="25%" dy="1.2em">Richards</tspan>
-
-        </text>
-      </mask>
-    </defs>
-    <rect width="100%" height="100%" fill="rgba(46,49,56,0.9)" mask="url(#text-mask)" />
-  </svg>
-
-  <div class="about-text">
+      <div class="intro-text">
         <p>
-          <span class="name"> Mahalia is an interdisciplinary artist + designer, researcher + educator 
+          Mahalia is an interdisciplinary artist + designer,<br> researcher + educator.
         </p>
-        </div>
-  
-      <!-- <div id="about-block" style="display:none">
-        <div class="about-text">
-          <p>
-            <span class="name"> Mahalia <span class="phonetic">[ma-hay-lee-yah]</span> Henry-Richards </span>is an artist and creative technologist fascinated by the interplay between computation and the multi-sensory human experience. Their playful and exploratory approach challenges the traditional divide between physical and digital, pushing the boundaries of space and interaction.</p>
-          <p>
-            With extensive experience in the design industry, she has worked on diverse projects across spatial and cartographic design, user experience, and interface design. They were previously a lecturer at the University of Creative Arts before joining the Creative Computing Institute in 2021. Mahalia holds an MArch in Design for Performance and Interaction from the Bartlett (UCL) and a BA in Interior Architecture from Nottingham Trent University. Their research interests focus on hybrid spaces, 'messiness,' and intersectional approaches to the study of creativity and play.
-          </p>
-          <p>At the Creative Computing Institute, Mahalia teaches on the MSc Creative Computing program, with a particular emphasis on crafting immersive computational environments and experience design.</p>
-        </div>
-      </div> -->
+      </div>
+    </div>
+
+    <div id="contact-block">      
+      <nav>
+        <li>Contact - <a onclick="window.open ('mailto:mahaliahenryrichards@gmail.com')">Email</a></li>
+        <li>/ Social - <a onclick="window.open ('https://www.instagram.com/mm_hr_/')">@mm_hr_</a></li>
+      </nav>
     </div>
   </div>
 
-  <!-- HERO NAME MASK (cuts a text-shaped hole in a semi-opaque overlay) -->
-  <svg class="name-mask" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <!-- HERO NAME MASK - fixed to viewport, outside container -->
+  <svg class="name-mask" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs>
       <mask id="text-mask" maskUnits="userSpaceOnUse">
-        <!-- white = overlay visible, black = transparent (reveals background) -->
-        <rect width="100%" height="100%" fill="white" />
+        <rect x="0" y="0" width="1200" height="800" fill="white" />
         <text id="mask-text"
-              x="10%" y="25%"
+              x="2%" y="30%"
               text-anchor="start"
               dominant-baseline="middle">
-          <tspan x="10%" dy="0">Mahalia</tspan>
-          <tspan x="10%" dy="1.2em">Henry-</tspan>
-          <tspan x="25%" dy="1.2em">Richards</tspan>
+          <tspan x="2%" dy="0">Mahalia</tspan>
+          <tspan x="2%" dy="1em">Henry-</tspan>
+          <tspan x="20%" dy="1em">Richards</tspan>
         </text>
       </mask>
     </defs>
-    <rect width="100%" height="100%" fill="rgba(55, 53, 75, 0.2)" mask="url(#text-mask)" />
+    <rect x="0" y="0" width="1200" height="800" fill="rgba(46,49,56,0.9)" mask="url(#text-mask)" />
   </svg>
 
-  <div class="footer">
+  <div class="footer"> 
     &copy; <script>document.write(new Date().getFullYear());</script> Mahalia Henry-Richards
   </div>
 
