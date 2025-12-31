@@ -6,6 +6,7 @@ fetch('./assets/images.json')
   .then(response => response.json())
   .then(data => {
     images = data;
+    i = Math.floor(Math.random() * images.length);
     console.log(`Loaded ${images.length} images`);
   })
   .catch(err => console.error('Error loading images:', err));
